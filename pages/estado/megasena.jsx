@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { mega } from "../../functions/mega"
 import NumeroDisplay from "../../components/NumeroDisplay";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,7 +6,11 @@ import { Button } from 'reactstrap';
 
 export default function megasena(){
     const [qtde, setQtde] = useState(6)
-    const [numeros, setNumeros] = useState(mega())
+    const [numeros, setNumeros] = useState([])
+
+    useEffect(()=>{
+        setNumeros(mega())
+    }, [])
 
     function renderizarNumeros(){
 

@@ -1,0 +1,13 @@
+.align-button>button {
+    width: 80px;
+    margin: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
